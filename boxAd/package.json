@@ -1,0 +1,48 @@
+{
+  "name": "lhs-kiosk-gbm-frontend",
+  "version": "0.0.1",
+  "description": "GB Kiosk manager frontend",
+  "productName": "GB Kiosk manager front",
+  "author": "shawn <shawn@igsg.com>",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.vue ./",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@chenfengyuan/vue-barcode": "^2.0.1",
+    "@quasar/extras": "^1.15.8",
+    "jsbarcode": "^3.11.5",
+    "pinia": "^2.0.11",
+    "qrious": "^4.0.2",
+    "quasar": "^2.11.1",
+    "vue": "^3.2.45",
+    "vue-barcode": "^1.3.0",
+    "vue-i18n": "^9.0.0",
+    "vue-router": "^4.0.0",
+    "vue3-lottie": "^2.3.0"
+  },
+  "devDependencies": {
+    "@intlify/vite-plugin-vue-i18n": "^3.3.1",
+    "@quasar/app-vite": "^1.1.3",
+    "autoprefixer": "^10.4.2",
+    "eslint": "^8.10.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "workbox-build": "^6.5.4",
+    "workbox-cacheable-response": "^6.5.4",
+    "workbox-core": "^6.5.4",
+    "workbox-expiration": "^6.5.4",
+    "workbox-precaching": "^6.5.4",
+    "workbox-routing": "^6.5.4",
+    "workbox-strategies": "^6.5.4"
+  },
+  "engines": {
+    "node": "^18 || ^16 || ^14.19",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
