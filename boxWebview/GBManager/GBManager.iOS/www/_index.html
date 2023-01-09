@@ -1,0 +1,129 @@
+﻿<html>
+<head>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/invokeHelper.js"></script>
+    <script type="text/javascript">
+
+        function formatBytes(bytes, decimals) {
+            if (!+bytes) return '0 Bytes'
+
+            const k = 1024
+            const dm = decimals < 0 ? 0 : decimals
+            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+
+            const i = Math.floor(Math.log(bytes) / Math.log(k))
+
+            return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
+        }
+
+        function JustAlert(data) {
+            alert(data);
+        }
+
+        function InternalStorageSize(data) {
+            alert('Total : ' + formatBytes((Number)(data.totalsize)) + ' / Free : ' + formatBytes((Number)(data.freesize)));
+        }
+
+        function AlertBaterry(data) {
+            alert('ChargeLevel : ' + data.chargelevel + ' / State : ' + data.state + ' / PowerSource : ' + data.powersource + ' / EnergySaverStatus; : ' + data.energysaverstatus);
+        }
+
+        function AlertDeviceDisplay(data) {
+            alert('Density : ' + data.density + ' / Height : ' + data.height + ' / Width : ' + data.Width + ' / Orientation; : ' + data.orientation + ' / refreshrate; : ' + data.refreshrate + ' / rotation; : ' + data.rotation);
+        }
+
+        function WifiReturn(data) {
+            alert('Wifi!!!!!' + data);
+        }
+
+        GBM.returnGetDeviceInfo = JustAlert;
+        GBM.returnGetInternalStorageSizeInfo = JustAlert;
+        GBM.returnGetScreenBrightness = JustAlert;
+        GBM.returnGetBatteryInfo = JustAlert;
+
+        GBM.returnGetDeviceDisplayInfo = JustAlert;
+        GBM.returnGetDeviceDisplayKeepOn = JustAlert;
+
+        GBM.returnGetSSID = JustAlert;
+
+        GBM.returnGetIMEIInfo = JustAlert;
+
+        GBM.returnGetPermissions = JustAlert;
+        GBM.returnRequestConnectWifi = WifiReturn;
+
+        GBM.returnReadLocalStorage = JustAlert;
+
+        GBM.returnGetNICInfo = JustAlert;
+
+        GBM.returnCheckAttributes = JustAlert;
+
+    </script>
+    <script type="text/javascript">
+        function verifySSID() {
+            alert($(ssid_name).val());
+            alert($(ssid_pw).val());
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" id="attr_key" value="imei" /><input type="button" value="CheckAttributes" onclick="GBM.CheckAttributes($(attr_key).val());" />
+        <p>
+            ScreenBrightness<br />
+            <input type="button" value="GetBrightness" onclick="evalGetScreenBrightness();" />
+            <input type="button" value="SetBrightness to max" onclick="evalSetScreenBrightness(1);" />
+            <input type="button" value="SetBrightness to 0.5" onclick="evalSetScreenBrightness(0.5);" />
+        <p>
+            SSID<br />
+            <input type="button" value="GetSSID" onclick="evalGetSSID();" />
+        <p>
+            DeviceInfo<br />
+            <input type="button" value="GetDeviceInfo" onclick="evalGetDeviceInfo();" />
+        <p>
+            BatteryInfo<br />
+            <input type="button" value="GetBatteryInfo" onclick="evalGetBatteryInfo();" />
+        <p>
+            DeviceDisplayInfo<br />
+            <input type="button" value="GetDeviceDisplayInfo" onclick="evalGetDeviceDisplayInfo();" />
+            <input type="button" value="GetDeviceDisplayKeepOn" onclick="evalGetDeviceDisplayKeepOn();" />
+            <input type="button" value="SetDeviceDisplayKeepOn true" onclick="evalSetDeviceDisplayKeepOn(true);" />
+            <input type="button" value="SetDeviceDisplayKeepOn false" onclick="evalSetDeviceDisplayKeepOn(false);" />
+        <p>
+            InternalStorage<br />
+            <input type="button" value="GetInternalStorageSizeInfo" onclick="evalGetInternalStorageSizeInfo();" />
+
+        <p>
+            IMEI<br />
+            <input type="button" value="GetIMEIInfo" onclick="GBM.GetIMEIInfo();" />
+        <p>
+            MDM Attributes<br />
+            Attribute Check<input type="text" id="attr_key" value="imei" /><input type="button" value="CheckAttributes" onclick="GBM.CheckAttributes($(attr_key).val());" /><br/>
+            <input type="button" value="GetMDMID" onclick="GBM.GetMDMID();" />
+<p>
+            NIC<br />
+            <input type="button" value="GetNICInfo" onclick="GBM.GetNICInfo();" />
+
+        <p>
+            Permission<br />
+            <input type="button" value="GetPermissions" onclick="GBM.GetPermissions();" />
+            <input type="button" value="RequestPermissions" onclick="GBM.RequestPermissions();" />
+
+        <p>
+            Wifi<br />
+            <!--
+            SSID NAME<input type="text" id="ssid_name" value="IGSGKOREA" /><br />
+            SSID PASSWORD <input type="text" id="ssid_pw" value="innogswireless!" /><br />
+        -->
+            SSID NAME<input type="text" id="ssid_name" value="devNAMU" /><br />
+            SSID PASSWORD <input type="text" id="ssid_pw" value="epqmskan!1" /><br />
+            <input type="button" value="ConnectWifi" onclick="GBM.RequestConnectWifi($(ssid_name).val(), $(ssid_pw).val());" />
+
+        <p>
+            LocalStorage<br />
+            <input type="button" value="Read" onclick="GBM.ReadLocalStorage($(lskey).val());" /> <input type="button" value="Write" onclick="GBM.WriteLocalStorage($(lskey).val(), $(lsdata).val());" /><BR />
+            KEY<input type="text" id="lskey" /><br />
+            DATA<br /><textarea id="lsdata" rows="5" cols="30"></textarea><br />
+    </div>
+</body>
+</html>
