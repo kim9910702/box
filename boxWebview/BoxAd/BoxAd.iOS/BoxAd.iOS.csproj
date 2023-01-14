@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F4A522D-BCEE-4C18-A125-7D7E5937830D}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BoxAd.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>BoxAd.iOS</AssemblyName>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <ProvisioningType>automatic</ProvisioningType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>Apple Development: Changyong Jeong (KYUUR7SJ39)</CodesignKey>
+    <CodesignProvision>VS: com.hunq.BoxAd Development</CodesignProvision>
+    <AssemblyName>BoxAd.iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignProvision>VS: com.hunq.BoxAd Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>Apple Development: Changyong Jeong (KYUUR7SJ39)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>None</MtouchLink>
+    <MtouchInterpreter>-all</MtouchInterpreter>
+    <CodesignProvision>VS: com.hunq.BoxAd Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Distribution: kt m&amp;s co. ltd.</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>BoxAd Distribution</CodesignProvision>
+    <BuildIpa>true</BuildIpa>
+    <IpaIncludeArtwork>false</IpaIncludeArtwork>
+    <IpaPackageName>BoxAd.ipa</IpaPackageName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Controls\AssetFileProvider.cs" />
+    <Compile Include="Controls\GBMBridge.cs" />
+    <Compile Include="Controls\GBMWebViewRenderer.cs" />
+    <Compile Include="InfoServices\BatteryService.cs" />
+    <Compile Include="InfoServices\BrightnessService.cs" />
+    <Compile Include="InfoServices\DeviceDisplayService.cs" />
+    <Compile Include="InfoServices\DeviceInfoService.cs" />
+    <Compile Include="InfoServices\IMEIService.cs" />
+    <Compile Include="InfoServices\InternalStorageService.cs" />
+    <Compile Include="InfoServices\LocalStorageService.cs" />
+    <Compile Include="InfoServices\NICInfoService.cs" />
+    <Compile Include="InfoServices\PermissionService.cs" />
+    <Compile Include="InfoServices\SSIDService.cs" />
+    <Compile Include="InfoServices\WifiService.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <None Include="www\assets\gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUcY.8e94758c.woff" />
+    <None Include="www\assets\QSpinner.e2cb3522.js" />
+    <None Include="www\assets\flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.83be7b2f.woff2" />
+    <None Include="www\assets\gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUcel5euIg.35dca8a7.woff2" />
+    <None Include="www\assets\QImg.cd1750dc.js" />
+    <None Include="www\assets\DeviceStorage-QRCode.52695836.js" />
+    <None Include="www\assets\QPage.f1c10c57.js" />
+    <None Include="www\assets\LDItaoyNOAY6Uewc665JcIzCKsKc_M9flwmJ.1c135b15.woff" />
+    <None Include="www\assets\MainLayout.3b4bfec6.js" />
+    <None Include="www\assets\gbm.354f6bd5.js" />
+    <None Include="www\assets\KFOlCnqEu92Fr1MmWUlfBBc-.e0fd57c0.woff" />
+    <None Include="www\assets\KFOmCnqEu92Fr1Mu4mxM.f2abf7fb.woff" />
+    <None Include="www\assets\Connect-Kiosk-Device.c84c30fd.js" />
+    <None Include="www\assets\KFOlCnqEu92Fr1MmYUtfBBc-.f6537e32.woff" />
+    <None Include="www\assets\LDItaoyNOAY6Uewc665JcIzCKsKc_M9flwmPq_HTTw.c948f126.woff2" />
+    <None Include="www\assets\render.b4ab3fbf.js" />
+    <None Include="www\assets\KFOlCnqEu92Fr1MmSU5fBBc-.bf14c7d7.woff" />
+    <None Include="www\assets\ErrorNotFound.0aeab69c.js" />
+    <None Include="www\assets\dom.b8df4452.js" />
+    <None Include="www\assets\logo-gbm.29bfcb4f.svg" />
+    <None Include="www\assets\Access-rights.c38d3b55.js" />
+    <None Include="www\assets\IndexPage.aacc7e72.js" />
+    <None Include="www\assets\QBtn.f392f202.js" />
+    <None Include="www\assets\flUhRq6tzZclQEJ-Vdg-IuiaDsNa.fd84f88b.woff" />
+    <None Include="www\assets\KFOkCnqEu92Fr1MmgVxIIzQ.34e9582c.woff" />
+    <None Include="www\assets\index.0a0320ea.js" />
+    <None Include="www\assets\KFOlCnqEu92Fr1MmEU9fBBc-.9ce7f3ac.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\1201.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\401.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\402.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\581.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\801.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\GBMIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EmbedIO">
+      <Version>3.5.2</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.4</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.4" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\BoxAd\BoxAd.csproj">
+      <Project>{1D670530-08DB-4B95-A99D-AD32BA1A4D13}</Project>
+      <Name>BoxAd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="www\index.html" />
+    <BundleResource Include="www\assets\kiosk.6c9c667c.png" />
+    <BundleResource Include="www\icons\favicon-16x16.png" />
+    <BundleResource Include="www\icons\favicon-128x128.png" />
+    <BundleResource Include="www\icons\favicon-96x96.png" />
+    <BundleResource Include="www\icons\favicon-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="www\js\jquery-2.1.4.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="www\js\init.js" />
+    <BundleResource Include="www\js\invokeHelper.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\assets\index.3f8ce295.css" />
+    <EmbeddedResource Include="www\assets\Connect-Kiosk-Device.7c883eea.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="www\data\" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionGBManageriOSHideInfoBar="True" XamarinHotReloadMonoInterpreterErrorInfoBarGBManageriOSHideInfoBar="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
