@@ -4,10 +4,12 @@
 		@click="goNext"
 	>
 		<div>
+			112233
 			<q-img
 				src="@/assets/images/logo-gbm.svg"
 				width="200px"
 			/>
+			112233
 		</div>
 	</div>
 </template>
